@@ -1,80 +1,23 @@
 @echo off
 color 0b
-title Paranoia (or is it?)
+title eChat12
 cls
-
-:: Well... If you want to make mods, THAT's not allowed
-:: The Mod Section on the site coming soon!
-echo Setup...
-set /p UserNamexr=Name:
-echo To view the Paranoia chat, click on COMMENTS.bat 
-echo To view the chat, simply type "chat"
-echo Share COMMENTS.bat and a Google Docs file with everyone playing Paranoia. 
-echo The google docs file will contain "who's most likely to..."  
-echo L
-echo Setup Done.
+echo Share the COMMENTS file with anyone you want to chat with to chat.
 pause
-echo %UserNamexr% joined the Paranoia Game.
-goto Chat
-: Chat
 cls
-title %UserNamexr% is playing Paranoia.
+set /p eChat12Name=Name:
 cls
-set /p ChatInputxr=Paranoia Chat:
-if %ChatInputxr% == chat goto xrchat
-if %ChatInputxr% == Templates goto xrtemplates
-echo echo %UserNamexr%: %ChatInputxr%>>COMMENTS.bat
-echo pause >>COMMENTS.bat
-goto Chat
-:xrchat
-start COMMENTS.bat
-goto Chat
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+title Chatting as %eChat12Name%
+cls
+: userregistrationdone
+cls
+echo Here are somethings you might want to comment in Paranoia (more like a Paranoia chat) 
+echo Right click on the line you want to comment.
+echo We cant tell you the question.
+echo The question was who'se most likely to [...]
+echo Everyone has been requested to temorarily go out. We are deciding and telling the questions 
+echo Please wait on a google docs file and when we are online on it we are ready to tell you the name / answer
+set /p eChat12Comment=Comment:
+echo echo %eChat12Comment%>>COMMENTS.bat 
+echo pause>>COMMENTS.bat
+goto userregistrationdone
